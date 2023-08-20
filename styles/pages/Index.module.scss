@@ -46,4 +46,8 @@
     bottom: 32px;
     color: var(--hushed);
   }
+
+  >.linesImage {
+    pointer-events: none;
+  }
 }
