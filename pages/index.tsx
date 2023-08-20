@@ -31,6 +31,14 @@ export default function Index() {
       >
         presented-by-v1@michigan ~ % ▓
       </a>
+
+      <Image
+        src='/img/lines.svg'
+        alt='lines.svg'
+        layout='fill'
+        objectFit='cover'
+        className={styles.linesImage}
+      />
     </div>
   )
 }
