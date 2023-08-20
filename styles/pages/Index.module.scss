@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  > .center {
+    text-align: center;
+    padding: 0 32px;
+
+    > .titleImage {
+      position: relative;
+      height: 300px;
+      margin: -80px 0 -30px 0;
+
+      @media (max-width: 767.98px) {
+        margin: -60px 0 -10px 0;
+        height: 200px;
+      }
+    }
+
+    > p {
+      font-size: 24px;
+      max-width: 700px;
+
+      @media (max-width: 767.98px) {
+        font-size: 20px;
+      }
+
+      &:first-of-type {
+        margin-bottom: 32px;
+      }
+    }
+
+    .alt {
+      color: var(--text-alt);
+    }
+  }
+
+  > .footerText {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    color: var(--hushed);
+  }
+}

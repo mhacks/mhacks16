@@ -1,33 +1,50 @@
+:root {
+  --text: #d9e3ff;
+  --text-alt: #ffdb80;
+  --hushed: #737373;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html,
-body {
+body,
+#__next {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100%;
+  background: #000;
 }
 
 html,
 body,
-#__next {
-  height: 100%;
+button,
+input,
+textarea {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text);
 }
 
 a {
-  color: inherit;
+  color: var(--text-alt);
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 button {
   cursor: pointer;
 }
 
-button,
-input,
-textarea {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
