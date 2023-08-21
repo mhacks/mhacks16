@@ -50,6 +50,10 @@
     color: var(--hushed);
     white-space: nowrap;
 
+    > a {
+      color: var(--hushed);
+    }
+
     @media (max-width: 767.98px) {
       font-size: 14px;
       left: 50%;

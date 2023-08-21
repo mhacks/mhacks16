@@ -1,7 +1,16 @@
 import styles from '@/styles/pages/Index.module.scss'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 export default function Index() {
+  const [flash, setFlash] = useState(true)
+
+  // set up console flash interval
+  useEffect(() => {
+    const flashInterval = setInterval(() => setFlash((value) => !value), 500)
+    return () => clearInterval(flashInterval)
+  }, [])
+
   return (
     <div className={styles.container}>
       <div className={styles.center}>
@@ -31,14 +40,16 @@ export default function Index() {
         </p>
       </div>
 
-      <a
-        className={styles.footerText}
-        href='https://v1michigan.com/'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        presented-by-v1@michigan ~ % ▓
-      </a>
+      <p className={styles.footerText}>
+        <a
+          href='https://v1michigan.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          presented-by-v1@michigan
+        </a>{' '}
+        ~ % {flash && '▓'}
+      </p>
 
       <Image
         src='/img/lines.svg'
