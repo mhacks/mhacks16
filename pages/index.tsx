@@ -48,7 +48,7 @@ export default function Index() {
         >
           presented-by-v1@michigan
         </a>{' '}
-        ~ % {flash && '▓'}
+        ~ % {flash ? '▓' : ' '}
       </p>
 
       <Image
