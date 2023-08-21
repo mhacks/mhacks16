@@ -17,9 +17,17 @@ export default function Index() {
           Applications open soon.
         </p>
 
+        <a
+          href='https://tally.so/r/n996BE'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Notify me when apps open &rarr;
+        </a>
+
         <p>
           If you’re interested in becoming a sponsor, please reach out at{' '}
-          <a href='mailto:sponsorship@mhacks.org'>sponsorship@mhacks.org.</a>
+          <a href='mailto:sponsorship@mhacks.org'>sponsorship@mhacks.org</a>.
         </p>
       </div>
 
