@@ -14,6 +14,7 @@ body,
   padding: 0;
   margin: 0;
   height: 100%;
+  background: #f7f5ff;
 }
 
 html,
@@ -46,4 +47,25 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+@font-face {
+  font-family: 'nm-light';
+  src: url('/fonts/NeueMachina-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nm-regular';
+  src: url('/fonts/NeueMachina-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nm-bold';
+  src: url('/fonts/NeueMachina-Ultrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
 }
