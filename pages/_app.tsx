@@ -4,10 +4,9 @@ import Head from 'next/head'
 
 // site meta
 const title = 'MHacks'
-const description =
-  'Michigan’s premier hackathon is back in person. November 18-19, 2023. Applications open soon.'
+const description = 'The most hype hackathon in the world is BACK.'
 const url = 'https://mhacks.org/'
-const image = 'https://mhacks.org/img/title.svg'
+const image = 'https://mhacks.org/img/background.png'
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props
