@@ -33,8 +33,22 @@ export default function Index() {
             >
               Apply Now
             </a>
-            <p>Due Oct 30</p>
-          </div>
+            {/* <p>Due Oct 30</p> */}          
+          </div>           
+        </div>
+        <div className={styles.becomeContainer}>
+          <a 
+            href="mailto:sponsorship@mhacks.org" 
+            style={{ color: '#FFFFFF', textDecoration: 'underline' }}
+          >
+            Become a Sponsor
+          </a>
+          <a 
+            href="mailto:mentorship@mhacks.org" 
+            style={{ color: '#FFFFFF', textDecoration: 'underline' }}
+          >
+            Become a Mentor
+          </a>
         </div>
       </div>
 
@@ -98,7 +112,15 @@ export default function Index() {
           </div>
         </div>
 
-        <h2>Sponsors</h2>
+        <h2>Sponsors</h2>        
+        <h2 style={{ marginTop: '20px', marginBottom: '20px' }}>Coming Soon...</h2>
+        <a
+            className={styles.becomeContainer}
+            href="mailto:sponsorship@mhacks.org" 
+            style={{ color: '#897de6', textDecoration: 'underline'}}
+          >
+            Become a Sponsor
+          </a>
       </div>
 
       <div className={styles.schedule}>
