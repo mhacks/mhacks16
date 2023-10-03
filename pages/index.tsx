@@ -87,6 +87,38 @@ export default function Index() {
           </div>
         </div>
       </div>
+
+      <div className={styles.sponsors}>
+        <div className={styles.logoflex}>
+          <div className={styles.mlogo}>
+            <Image src='/img/m.svg' alt='m.svg' width='120' height='120' />
+            <div className={styles.sixteen}>
+              <Image src='/img/16.svg' alt='16.svg' width='40' height='40' />
+            </div>
+          </div>
+        </div>
+
+        <h2>Sponsors</h2>
+      </div>
+
+      <div className={styles.schedule}>
+        <div className={styles.background} />
+        <div className={styles.block}>
+          <h2>Schedule</h2>
+          <p>Opening Ceremony</p>
+        </div>
+      </div>
+
+      <div className={styles.faq}>
+        <div className={styles.content}>
+          <h2>FAQ</h2>
+          <p>
+            Yes! There will be answers to your questions here. These drawers
+            will open when you click on a question. They will close when you
+            click on them again.
+          </p>
+        </div>
+      </div>
     </div>
   )
 }

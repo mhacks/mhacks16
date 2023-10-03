@@ -191,4 +191,83 @@
       }
     }
   }
+
+  > .sponsors {
+    text-align: center;
+    padding: 64px;
+
+    > .logoflex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > .mlogo {
+        position: relative;
+
+        > .sixteen {
+          position: absolute;
+          right: -48px;
+          top: 8px;
+        }
+      }
+    }
+
+    > h2 {
+      color: #202020;
+      font-size: 48px;
+      font-family: 'nm-bold';
+    }
+  }
+
+  > .schedule {
+    height: 40vw;
+    position: relative;
+    padding: 64px;
+    display: flex;
+    justify-content: center;
+
+    > .background {
+      background: url('/img/jump.png');
+      background-position: center center;
+      background-size: cover;
+      mix-blend-mode: color-burn;
+      opacity: 30%;
+      position: absolute;
+      inset: 0;
+    }
+
+    > .block {
+      background: #fff;
+      color: #9175ff;
+      width: 600px;
+      text-align: center;
+      padding: 32px;
+    }
+  }
+
+  > .faq {
+    height: 60vw;
+    background: url('/img/faq.png');
+    background-position: center center;
+    background-size: cover;
+    font-family: 'nm-bold';
+    padding: 64px;
+    display: flex;
+    justify-content: center;
+
+    > .content {
+      width: 800px;
+
+      > h2 {
+        font-size: 64px;
+        margin-bottom: 16px;
+      }
+
+      > p {
+        font-family: 'nm-regular';
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
 }
