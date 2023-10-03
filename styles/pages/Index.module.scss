@@ -104,8 +104,52 @@
       opacity: 0.7;
       gap: 40px;
     }
+    > .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;      
+    
+      > .navLogo {
+        font-size: 1.5rem;
+    
+        > a {
+          color: #fff;
+          font-family: 'nm-bold';
+          text-decoration: none;          
+        }
+      }
+    
+      > .navLinks {
+        padding: 0;
+        margin: 0;
+        font-family: 'nm-bold';
+        list-style-type: none;
+        display: flex;
+    
+        > li {
+          padding: 0;
+          margin: 0;
+    
+          > a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+    
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
   }
-
+  
   > .hackathon {
     padding: 64px;
     display: flex;
@@ -230,7 +274,7 @@
   }
 
   > .schedule {
-    height: 60vw;
+    height: 40vw;
     min-height: 600px;
     position: relative;
     padding: 64px;
@@ -251,35 +295,74 @@
       background: #fff;
       color: #9175ff;
       width: 600px;
-      text-align: center;
+      text-align: start;
       padding: 32px;
+
+      > .scheduleItem {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 30px;
+        gap: 20px;
+  
+        > .time {
+          width: 150px; 
+          text-align: left;
+        }
     }
   }
+}
 
-  > .faq {
-    height: 60vw;
-    min-height: 600px;
-    background: url('/img/faq.png');
-    background-position: center center;
-    background-size: cover;
-    font-family: 'nm-bold';
-    padding: 64px;
-    display: flex;
-    justify-content: center;
+> .faq {
+  height: auto; // Adjust the height to be only as tall as it needs to be
+  background: url('/img/faq.png');
+  background-position: center center;
+  background-size: cover;
+  font-family: 'nm-bold';
+  padding: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; // Ensure the FAQ starts at the top
 
-    > .content {
-      width: 800px;
+  > .content {
+    width: 800px;
 
-      > h2 {
-        font-size: 64px;
-        margin-bottom: 16px;
-      }
+    > h2 {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
 
-      > p {
-        font-family: 'nm-regular';
-        font-size: 20px;
-        line-height: 28px;
+    > p {
+      font-family: 'nm-regular';
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    > .question {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #9175ff; // Add a line underneath each FAQ block
+      padding: 10px 0; // Add some spacing above and below each FAQ block
+
+      > .arrow {
+        transition: transform 0.3s ease;
+
+        &.open {
+          transform: rotate(180deg);
+        }
       }
     }
+
+    .answer {
+      display: none; // Hide by default
+      padding: 10px 0;
+    }
+
+    .question:last-child {
+      border-bottom: none; // Ensure the last FAQ block doesn't have a bottom border
+    }
   }
+}
 }

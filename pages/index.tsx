@@ -1,10 +1,39 @@
+import { useState, useEffect } from 'react';
 import styles from '@/styles/pages/Index.module.scss'
 import Image from 'next/image'
 
 export default function Index() {
+  useEffect(() => {
+    if (window.location.hash) {
+        window.scrollTo(0, 0);
+        window.history.pushState("", document.title, window.location.pathname + window.location.search);
+        }
+  }, []);
+
+  const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
+  const handleToggle = (questionId: number) => {
+    if (activeQuestion === questionId) {
+      setActiveQuestion(null);
+    } else {
+      setActiveQuestion(questionId);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.landing}>
+        <nav className={styles.navbar}>
+          <div className={styles.navLogo}>
+            <a href="#">Logo</a>
+          </div>
+          <ul className={styles.navLinks}>
+            <li><a href="#about">About</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
         <div className={styles.terminal}>
           <div className={styles.logoImage}>
             <Image src='/img/logo.svg' alt='logo.svg' layout='fill' />
@@ -52,7 +81,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className={styles.hackathon}>
+      <div id="about" className={styles.hackathon}>
         <Image
           src='/img/speaking.png'
           alt='speaking.png'
@@ -76,7 +105,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className={styles.stats}>
+      <div id="history" className={styles.stats}>
         <video src='/mhacks4.mov' autoPlay loop muted />
 
         <h2>The Most Hype Hackathon</h2>
@@ -102,7 +131,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className={styles.sponsors}>
+      <div id="sponsors" className={styles.sponsors}>
         <div className={styles.logoflex}>
           <div className={styles.mlogo}>
             <Image src='/img/m.svg' alt='m.svg' width='120' height='120' />
@@ -123,22 +152,51 @@ export default function Index() {
           </a>
       </div>
 
-      <div className={styles.schedule}>
+      <div id="schedule" className={styles.schedule}>
         <div className={styles.background} />
         <div className={styles.block}>
           <h2>Schedule</h2>
-          <p>Opening Ceremony</p>
+          <div className={styles.scheduleItem}>
+            <h3 className={styles.time}>Nov 18, 9am </h3>
+            <h3 style={{color: '#606060'}}>Checkin</h3>
+          </div>
+          <div className={styles.scheduleItem}>
+            <h3 className={styles.time}>Nov 18, 10am</h3>
+            <h3 style={{color: '#606060'}}>Opening Ceremony</h3>
+          </div>
+          <div className={styles.scheduleItem}>
+            <h3 className={styles.time}>Nov 18, 11am</h3>
+            <h3 style={{color: '#606060'}}>Team Formation</h3>
+          </div>
+          <div className={styles.scheduleItem}>
+            <h3 className={styles.time}>Nov 18, 12pm</h3>
+            <h3 style={{color: '#606060'}}>Hacking Begins</h3>
+          </div>
+          <div className={styles.scheduleItem}>
+            <h3 className={styles.time}>Nov 19, 12pm</h3>
+            <h3 style={{color: '#606060'}}>Hacking Ends</h3>
+          </div>
+          <div className={styles.scheduleItem}>
+            <h3 className={styles.time}>Nov 19, 3pm </h3>
+            <h3 style={{color: '#606060'}}>Closing Ceremony</h3>
+          </div>
         </div>
       </div>
 
-      <div className={styles.faq}>
+      <div id="faq" className={styles.faq}>
         <div className={styles.content}>
           <h2>FAQ</h2>
-          <p>
-            Yes! There will be answers to your questions here. These drawers
-            will open when you click on a question. They will close when you
-            click on them again.
-          </p>
+          <div className={styles.question} onClick={() => handleToggle(1)}>
+            What is a hackathon?
+            <span className={styles.arrow + (activeQuestion === 1 ? ` ${styles.open}` : '')}>╲╱</span>
+          </div>
+          {activeQuestion === 1 && <div className={styles.answer}>A hackathon is an event...</div>}
+
+          <div className={styles.question} onClick={() => handleToggle(2)}>
+            How do I register?
+            <span className={styles.arrow + (activeQuestion === 2 ? ` ${styles.open}` : '')}>╲╱</span>
+          </div>
+          {activeQuestion === 2 && <div className={styles.answer}>You can register by...</div>}           
         </div>
       </div>
     </div>
