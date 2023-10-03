@@ -140,4 +140,55 @@
       flex-direction: column;
     }
   }
+
+  > .stats {
+    height: 42.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+
+    > video {
+      position: absolute;
+      display: block;
+      width: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    > h2 {
+      font-family: 'nm-bold';
+      font-size: 56px;
+    }
+
+    > p {
+      font-family: 'nm-light';
+      font-size: 20px;
+      line-height: 28px;
+      max-width: 800px;
+    }
+
+    > .numbers {
+      display: flex;
+      gap: 56px;
+      text-align: center;
+      margin-top: 16px;
+
+      > div {
+        > h3 {
+          font-size: 42px;
+          margin-bottom: 12px;
+          font-family: 'nm-bold';
+        }
+
+        > p {
+          font-size: 20px;
+          font-family: 'nm-light';
+        }
+      }
+    }
+  }
 }
