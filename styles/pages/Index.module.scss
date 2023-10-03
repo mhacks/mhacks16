@@ -143,6 +143,7 @@
 
   > .stats {
     height: 42.5vw;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,7 +221,8 @@
   }
 
   > .schedule {
-    height: 40vw;
+    height: 60vw;
+    min-height: 600px;
     position: relative;
     padding: 64px;
     display: flex;
@@ -247,6 +249,7 @@
 
   > .faq {
     height: 60vw;
+    min-height: 600px;
     background: url('/img/faq.png');
     background-position: center center;
     background-size: cover;
