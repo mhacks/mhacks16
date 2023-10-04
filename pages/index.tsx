@@ -24,7 +24,9 @@ export default function Index() {
       <div className={styles.landing}>
         <nav className={styles.navbar}>
           <div className={styles.navLogo}>
-            <a href="#">Logo</a>
+            <a href="#">
+            <Image src="/img/logo_m.svg" alt="logo" width={80} height={40}/>
+            </a>          
           </div>
           <ul className={styles.navLinks}>
             <li><a href="#about">About</a></li>
@@ -146,7 +148,7 @@ export default function Index() {
         <a
             className={styles.becomeContainer}
             href="mailto:sponsorship@mhacks.org" 
-            style={{ color: '#897de6', textDecoration: 'underline'}}
+            style={{ color: '#897de6', textDecoration: 'underline', fontFamily: 'nm-bold'}}
           >
             Become a Sponsor
           </a>
