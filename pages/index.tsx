@@ -223,7 +223,7 @@ export default function Index() {
             <Image src='/img/arrow.svg' alt='arrow' width={30} height={15}/>
             </span>
           </h3>
-          {activeQuestion === 1 && <div className={styles.answer}>Yes, unfortunatley we cannot have participants under the age of 18.</div>}
+          {activeQuestion === 1 && <div className={styles.answer}>Yes, unfortunately we cannot have participants under the age of 18.</div>}
 
           <h3 className={styles.question} onClick={() => handleToggle(2)}>
             How do I register?
