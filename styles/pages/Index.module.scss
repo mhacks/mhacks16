@@ -10,6 +10,13 @@
     background-position: center center;
     background-size: cover;
 
+    > .fixedBanner {
+      position: fixed;
+      top: 0px; 
+      right: 10px;
+      z-index: 1000;
+  }
+
     > .terminal {
       width: 800px;
       max-width: calc(100% - 80px);
