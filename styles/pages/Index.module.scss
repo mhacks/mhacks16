@@ -313,56 +313,68 @@
   }
 }
 
-> .faq {
-  height: auto; // Adjust the height to be only as tall as it needs to be
-  background: url('/img/faq.png');
-  background-position: center center;
-  background-size: cover;
-  font-family: 'nm-bold';
-  padding: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; // Ensure the FAQ starts at the top
+  // > .faq {
+  //   height: auto;
+  //   background: url('/img/faq.png');
+  //   background-position: center center;
+  //   background-size: cover;
+  //   font-family: 'nm-bold';
+  //   padding: 64px;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: flex-start;
 
-  > .content {
-    width: 800px;
+  > .faq {
+    height: 60vw;
+    min-height: 600px;
+    background: url('/img/faq.png');
+    background-position: center center;
+    background-size: cover;
+    font-family: 'nm-bold';
+    padding: 64px;
+    display: flex;
+    justify-content: center;
 
-    > h2 {
-      font-size: 64px;
-      margin-bottom: 16px;
-    }
+    > .content {
+      width: 700px;
 
-    > p {
-      font-family: 'nm-regular';
-      font-size: 20px;
-      line-height: 28px;
-    }
+      > h2 {
+        font-size: 64px;
+        margin-bottom: 16px;
+      }
 
-    > .question {
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #9175ff; // Add a line underneath each FAQ block
-      padding: 10px 0; // Add some spacing above and below each FAQ block
+      > h3 {
+        font-family: 'nm-regular';
+        font-size: 30px;
+        line-height: 45px;
+      }
 
-      > .arrow {
-        transition: transform 0.3s ease;
+      > .question {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #9175ff; 
+        padding: 10px 0;
 
-        &.open {
-          transform: rotate(180deg);
+        > .arrow {
+          transition: transform 0.3s ease;
+
+          &.open {
+            transform: rotate(180deg);
+          }
         }
       }
-    }
 
-    .answer {
-      display: none; // Hide by default
-      padding: 10px 0;
-    }
+      .answer {        
+        padding: 10px;
+        font-family: 'nm-regular';
+        font-size: 20px;
+      }
 
-    .question:last-child {
-      border-bottom: none; // Ensure the last FAQ block doesn't have a bottom border
+      .question:last-child {
+        border-bottom: none;
+      }
     }
   }
-}
 }
