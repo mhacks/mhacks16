@@ -3,7 +3,14 @@ import styles from '../styles/components/Stats.module.scss'
 export default function Stats() {
   return (
     <div id='history' className={styles.stats}>
-      <video src='/mhacks4.mov' autoPlay loop muted />
+      <video
+        src='/mhacks4.mov'
+        autoPlay
+        loop
+        muted
+        controls={false}
+        playsInline
+      />
 
       <h2>The Most Hype Hackathon</h2>
 

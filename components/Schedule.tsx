@@ -8,27 +8,27 @@ export default function Schedule() {
         <h2>Schedule</h2>
         <div className={styles.scheduleItem}>
           <h3 className={styles.time}>Nov 18, 9am </h3>
-          <h3 style={{ color: '#606060' }}>Checkin</h3>
+          <h4>Check-in</h4>
         </div>
         <div className={styles.scheduleItem}>
           <h3 className={styles.time}>Nov 18, 10am</h3>
-          <h3 style={{ color: '#606060' }}>Opening Ceremony</h3>
+          <h4>Opening Ceremony</h4>
         </div>
         <div className={styles.scheduleItem}>
           <h3 className={styles.time}>Nov 18, 11am</h3>
-          <h3 style={{ color: '#606060' }}>Team Formation</h3>
+          <h4>Team Formation</h4>
         </div>
         <div className={styles.scheduleItem}>
           <h3 className={styles.time}>Nov 18, 12pm</h3>
-          <h3 style={{ color: '#606060' }}>Hacking Begins</h3>
+          <h4>Hacking Begins</h4>
         </div>
         <div className={styles.scheduleItem}>
           <h3 className={styles.time}>Nov 19, 12pm</h3>
-          <h3 style={{ color: '#606060' }}>Hacking Ends</h3>
+          <h4>Hacking Ends</h4>
         </div>
         <div className={styles.scheduleItem}>
           <h3 className={styles.time}>Nov 19, 3pm </h3>
-          <h3 style={{ color: '#606060' }}>Closing Ceremony</h3>
+          <h4>Closing Ceremony</h4>
         </div>
       </div>
     </div>

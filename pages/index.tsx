@@ -1,6 +1,4 @@
-import { useState } from 'react'
 import styles from '@/styles/pages/Index.module.scss'
-import Image from 'next/image'
 import Faq from '@/components/Faq'
 import Schedule from '@/components/Schedule'
 import Sponsors from '@/components/Sponsors'

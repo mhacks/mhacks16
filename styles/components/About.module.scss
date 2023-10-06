@@ -5,6 +5,18 @@
   align-items: center;
   justify-content: center;
 
+  // > .speakingImage {
+  //   position: relative;
+  //   width: 500px;
+  //   max-width: 100%;
+  //   height: 300px;
+  // }
+
+  > img {
+    width: 100%;
+    max-width: 500px;
+  }
+
   > .what {
     color: #1d0093;
     max-width: 500px;

@@ -1,5 +1,5 @@
 .stats {
-  height: 42.5vw;
+  height: 40vw;
   min-height: 600px;
   display: flex;
   flex-direction: column;
@@ -8,11 +8,18 @@
   gap: 36px;
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 800px) {
+    gap: 24px;
+  }
 
   > video {
     position: absolute;
     display: block;
-    width: 100%;
+    min-width: 100%;
+    min-height: 600px;
     pointer-events: none;
     z-index: -1;
   }
@@ -20,6 +27,10 @@
   > h2 {
     font-family: 'nm-bold';
     font-size: 56px;
+
+    @media (max-width: 800px) {
+      font-size: 36px;
+    }
   }
 
   > p {
@@ -27,6 +38,7 @@
     font-size: 20px;
     line-height: 28px;
     max-width: 800px;
+    padding: 0 16px;
   }
 
   > .numbers {
@@ -35,11 +47,20 @@
     text-align: center;
     margin-top: 16px;
 
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 16px;
+    }
+
     > div {
       > h3 {
         font-size: 42px;
         margin-bottom: 12px;
         font-family: 'nm-bold';
+
+        @media (max-width: 800px) {
+          font-size: 36px;
+        }
       }
 
       > p {

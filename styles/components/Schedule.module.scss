@@ -1,5 +1,4 @@
 .schedule {
-  height: 40vw;
   min-height: 600px;
   position: relative;
   padding: 64px;
@@ -25,14 +24,17 @@
 
     > .scheduleItem {
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      justify-content: space-between;
       margin-top: 30px;
-      gap: 20px;
 
       > .time {
-        width: 150px;
+        // width: 150px;
         text-align: left;
+      }
+
+      > h4 {
+        color: #606060;
+        text-align: right;
       }
     }
   }

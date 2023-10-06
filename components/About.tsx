@@ -4,12 +4,8 @@ import styles from '../styles/components/About.module.scss'
 export default function About() {
   return (
     <div id='about' className={styles.hackathon}>
-      <Image
-        src='/img/speaking.png'
-        alt='speaking.png'
-        width='500'
-        height='300'
-      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src='/img/speaking.png' alt='speaking.png' />
 
       <div className={styles.what}>
         <h2>What’s a Hackathon?</h2>

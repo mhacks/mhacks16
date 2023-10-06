@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  min-height: 580px;
+  min-height: 600px;
   background: url('/img/background.png');
   background-position: center center;
   background-size: cover;
@@ -17,6 +17,7 @@
   }
 
   > .terminal {
+    margin-top: 40px;
     width: 800px;
     max-width: calc(100% - 80px);
     height: 450px;
@@ -40,15 +41,9 @@
     justify-content: center;
     gap: 16px;
 
-    .logoImage {
-      width: 555px;
-      height: 112px;
-      position: relative;
-
-      @media (max-width: 800px) {
-        width: calc(555px / 1.5);
-        height: calc(112px / 1.5);
-      }
+    > img {
+      width: 100%;
+      max-width: 400px;
     }
 
     .hype {
@@ -71,6 +66,19 @@
           font-weight: 800;
           opacity: 1;
         }
+
+        @media (max-width: 799.98px) {
+          font-size: 16px;
+          &.big {
+            display: none;
+          }
+        }
+
+        @media (min-width: 800px) {
+          &.small {
+            display: none;
+          }
+        }
       }
     }
 
@@ -81,6 +89,7 @@
       justify-content: center;
       gap: 10px;
       font-family: 'nm-bold';
+      margin-top: 8px;
 
       > a {
         display: flex;
@@ -102,14 +111,22 @@
       }
     }
   }
+
   > .becomeContainer {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 40px;
     opacity: 0.7;
     gap: 40px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
   }
+
   > .navbar {
     position: absolute;
     top: 0;
@@ -135,6 +152,10 @@
       font-family: 'nm-bold';
       list-style-type: none;
       display: flex;
+
+      @media (max-width: 800px) {
+        display: none;
+      }
 
       > li {
         padding: 0;

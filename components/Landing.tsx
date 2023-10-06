@@ -37,15 +37,14 @@ export default function Landing() {
         </ul>
       </nav>
       <div className={styles.terminal}>
-        <div className={styles.logoImage}>
-          <Image src='/img/logo.svg' alt='logo.svg' layout='fill' />
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src='/img/logo.svg' alt='logo.svg' />
 
         <div className={styles.hype}>
           The most hype hackathon in the world is BACK.
           <br />
           <br />
-          <p>
+          <p className={styles.big}>
             <span>{'[location :   '}</span>
             <b>Ann Arbor, MI</b>
             <span>{']'}</span>
@@ -53,6 +52,13 @@ export default function Landing() {
             <span>{'[date     : '}</span>
             <b>Nov 18-19, 2023</b>
             <span>{']'}</span>
+          </p>
+          <p className={styles.small}>
+            <span>location: </span>
+            <b>Ann Arbor, MI</b>
+            <br />
+            <span>date: </span>
+            <b>Nov 18-19, 2023</b>
           </p>
         </div>
 
