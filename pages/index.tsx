@@ -1,68 +1,86 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react'
 import styles from '@/styles/pages/Index.module.scss'
 import Image from 'next/image'
 
 export default function Index() {
   useEffect(() => {
     if (window.location.hash) {
-        window.scrollTo(0, 0);
-        window.history.pushState("", document.title, window.location.pathname + window.location.search);
-        }
-  }, []);
+      window.scrollTo(0, 0)
+      window.history.pushState(
+        '',
+        document.title,
+        window.location.pathname + window.location.search
+      )
+    }
+  }, [])
 
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [showBanner, setShowBanner] = useState(true);  
+  const [lastScrollTop, setLastScrollTop] = useState(0)
+  const [showBanner, setShowBanner] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
-        const currentScrollTop = document.documentElement.scrollTop;
+      const currentScrollTop = document.documentElement.scrollTop
 
-        if (currentScrollTop < lastScrollTop) {            
-            setShowBanner(true);
-        } else { 
-            setShowBanner(false);
-        }
+      if (currentScrollTop < lastScrollTop) {
+        setShowBanner(true)
+      } else {
+        setShowBanner(false)
+      }
 
-        setLastScrollTop(currentScrollTop);
-    };
+      setLastScrollTop(currentScrollTop)
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-        window.removeEventListener('scroll', handleScroll);
-    };
-}, [lastScrollTop]);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [lastScrollTop])
 
-
-  const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
+  const [activeQuestion, setActiveQuestion] = useState<number | null>(null)
   const handleToggle = (questionId: number) => {
     if (activeQuestion === questionId) {
-      setActiveQuestion(null);
+      setActiveQuestion(null)
     } else {
-      setActiveQuestion(questionId);
+      setActiveQuestion(questionId)
     }
-  };
+  }
 
   return (
     <div className={styles.container}>
       <div className={styles.landing}>
         {showBanner && (
           <div className={styles.fixedBanner}>
-              <Image src="/img/mlh_banner.svg" alt="MLH Banner" width={200} height={100} />
+            <Image
+              src='/img/mlh_banner.svg'
+              alt='MLH Banner'
+              width={200}
+              height={100}
+            />
           </div>
-          )}
+        )}
         <nav className={styles.navbar}>
           <div className={styles.navLogo}>
-            <a href="#">
-            <Image src="/img/logo_m.svg" alt="logo" width={80} height={40}/>
-            </a>          
+            <a href='#'>
+              <Image src='/img/logo_m.svg' alt='logo' width={80} height={40} />
+            </a>
           </div>
           <ul className={styles.navLinks}>
-            <li><a href="#about">About</a></li>
-            <li><a href="#history">History</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li>
+              <a href='#about'>About</a>
+            </li>
+            <li>
+              <a href='#history'>History</a>
+            </li>
+            <li>
+              <a href='#sponsors'>Sponsors</a>
+            </li>
+            <li>
+              <a href='#schedule'>Schedule</a>
+            </li>
+            <li>
+              <a href='#faq'>FAQ</a>
+            </li>
           </ul>
         </nav>
         <div className={styles.terminal}>
@@ -93,18 +111,18 @@ export default function Index() {
             >
               Apply Now
             </a>
-            {/* <p>Due Oct 30</p> */}          
-          </div>           
+            {/* <p>Due Oct 30</p> */}
+          </div>
         </div>
         <div className={styles.becomeContainer}>
-          <a 
-            href="mailto:sponsorship@mhacks.org" 
+          <a
+            href='mailto:sponsorship@mhacks.org'
             style={{ color: '#FFFFFF', textDecoration: 'underline' }}
           >
             Become a Sponsor
           </a>
-          <a 
-            href="mailto:mentorship@mhacks.org" 
+          <a
+            href='mailto:mentorship@mhacks.org'
             style={{ color: '#FFFFFF', textDecoration: 'underline' }}
           >
             Become a Mentor
@@ -112,7 +130,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div id="about" className={styles.hackathon}>
+      <div id='about' className={styles.hackathon}>
         <Image
           src='/img/speaking.png'
           alt='speaking.png'
@@ -136,7 +154,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div id="history" className={styles.stats}>
+      <div id='history' className={styles.stats}>
         <video src='/mhacks4.mov' autoPlay loop muted />
 
         <h2>The Most Hype Hackathon</h2>
@@ -162,7 +180,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div id="sponsors" className={styles.sponsors}>
+      <div id='sponsors' className={styles.sponsors}>
         <div className={styles.logoflex}>
           <div className={styles.mlogo}>
             <Image src='/img/m.svg' alt='m.svg' width='120' height='120' />
@@ -172,107 +190,175 @@ export default function Index() {
           </div>
         </div>
 
-        <h2>Sponsors</h2>        
-        <h2 style={{ marginTop: '20px', marginBottom: '20px' }}>Coming Soon...</h2>
+        <h2>Sponsors</h2>
+        <h2 style={{ marginTop: '20px', marginBottom: '20px' }}>
+          Coming Soon...
+        </h2>
         <a
-            className={styles.becomeContainer}
-            href="mailto:sponsorship@mhacks.org" 
-            style={{ color: '#897de6', textDecoration: 'underline', fontFamily: 'nm-bold'}}
-          >
-            Become a Sponsor
-          </a>
+          className={styles.becomeContainer}
+          href='mailto:sponsorship@mhacks.org'
+          style={{
+            color: '#897de6',
+            textDecoration: 'underline',
+            fontFamily: 'nm-bold',
+          }}
+        >
+          Become a Sponsor
+        </a>
       </div>
 
-      <div id="schedule" className={styles.schedule}>
+      <div id='schedule' className={styles.schedule}>
         <div className={styles.background} />
         <div className={styles.block}>
           <h2>Schedule</h2>
           <div className={styles.scheduleItem}>
             <h3 className={styles.time}>Nov 18, 9am </h3>
-            <h3 style={{color: '#606060'}}>Checkin</h3>
+            <h3 style={{ color: '#606060' }}>Checkin</h3>
           </div>
           <div className={styles.scheduleItem}>
             <h3 className={styles.time}>Nov 18, 10am</h3>
-            <h3 style={{color: '#606060'}}>Opening Ceremony</h3>
+            <h3 style={{ color: '#606060' }}>Opening Ceremony</h3>
           </div>
           <div className={styles.scheduleItem}>
             <h3 className={styles.time}>Nov 18, 11am</h3>
-            <h3 style={{color: '#606060'}}>Team Formation</h3>
+            <h3 style={{ color: '#606060' }}>Team Formation</h3>
           </div>
           <div className={styles.scheduleItem}>
             <h3 className={styles.time}>Nov 18, 12pm</h3>
-            <h3 style={{color: '#606060'}}>Hacking Begins</h3>
+            <h3 style={{ color: '#606060' }}>Hacking Begins</h3>
           </div>
           <div className={styles.scheduleItem}>
             <h3 className={styles.time}>Nov 19, 12pm</h3>
-            <h3 style={{color: '#606060'}}>Hacking Ends</h3>
+            <h3 style={{ color: '#606060' }}>Hacking Ends</h3>
           </div>
           <div className={styles.scheduleItem}>
             <h3 className={styles.time}>Nov 19, 3pm </h3>
-            <h3 style={{color: '#606060'}}>Closing Ceremony</h3>
+            <h3 style={{ color: '#606060' }}>Closing Ceremony</h3>
           </div>
         </div>
       </div>
 
-      <div id="faq" className={styles.faq}>
+      <div id='faq' className={styles.faq}>
         <div className={styles.content}>
           <h2>FAQ</h2>
           <h3 className={styles.question} onClick={() => handleToggle(1)}>
             Is there an age limit at MHacks 16?
-            <span className={styles.arrow + (activeQuestion === 1 ? ` ${styles.open}` : '')}>
-            <Image src='/img/arrow.svg' alt='arrow' width={30} height={15}/>
+            <span
+              className={
+                styles.arrow + (activeQuestion === 1 ? ` ${styles.open}` : '')
+              }
+            >
+              <Image src='/img/arrow.svg' alt='arrow' width={30} height={15} />
             </span>
           </h3>
-          {activeQuestion === 1 && <div className={styles.answer}>Yes, unfortunately we cannot have participants under the age of 18.</div>}
+          {activeQuestion === 1 && (
+            <div className={styles.answer}>
+              Yes, unfortunately we cannot have participants under the age of
+              18.
+            </div>
+          )}
 
           <h3 className={styles.question} onClick={() => handleToggle(2)}>
             How do I register?
-            <span className={styles.arrow + (activeQuestion === 2 ? ` ${styles.open}` : '')}>
-              <Image src='/img/arrow.svg' alt='arrow' width={30} height={15}/>
+            <span
+              className={
+                styles.arrow + (activeQuestion === 2 ? ` ${styles.open}` : '')
+              }
+            >
+              <Image src='/img/arrow.svg' alt='arrow' width={30} height={15} />
             </span>
           </h3>
-          {activeQuestion === 2 && <div className={styles.answer}>You can register by applying! Admissions will be reviewed on a rolling basis.</div>}
+          {activeQuestion === 2 && (
+            <div className={styles.answer}>
+              You can register by applying! Admissions will be reviewed on a
+              rolling basis.
+            </div>
+          )}
 
           <h3 className={styles.question} onClick={() => handleToggle(3)}>
             What experience level is needed?
-            <span className={styles.arrow + (activeQuestion === 3 ? ` ${styles.open}` : '')}>
-            <Image src='/img/arrow.svg' alt='arrow' width={30} height={15}/>
+            <span
+              className={
+                styles.arrow + (activeQuestion === 3 ? ` ${styles.open}` : '')
+              }
+            >
+              <Image src='/img/arrow.svg' alt='arrow' width={30} height={15} />
             </span>
           </h3>
-          {activeQuestion === 3 && <div className={styles.answer}>We are welcoming of all experience levels and backgrounds.</div>}   
+          {activeQuestion === 3 && (
+            <div className={styles.answer}>
+              We are welcoming of all experience levels and backgrounds.
+            </div>
+          )}
 
           <h3 className={styles.question} onClick={() => handleToggle(4)}>
             Do I have to be in-person?
-            <span className={styles.arrow + (activeQuestion === 4 ? ` ${styles.open}` : '')}>
-            <Image src='/img/arrow.svg' alt='arrow' width={30} height={15}/>
+            <span
+              className={
+                styles.arrow + (activeQuestion === 4 ? ` ${styles.open}` : '')
+              }
+            >
+              <Image src='/img/arrow.svg' alt='arrow' width={30} height={15} />
             </span>
           </h3>
-          {activeQuestion === 4 && <div className={styles.answer}>Yes, MHacks 16 is a fully in-person event. Hackers must be present throughout the hackathon to participate.</div>}      
+          {activeQuestion === 4 && (
+            <div className={styles.answer}>
+              Yes, MHacks 16 is a fully in-person event. Hackers must be present
+              throughout the hackathon to participate.
+            </div>
+          )}
 
           <h3 className={styles.question} onClick={() => handleToggle(5)}>
             Do I need to have an idea or team?
-            <span className={styles.arrow + (activeQuestion === 5 ? ` ${styles.open}` : '')}>
-            <Image src='/img/arrow.svg' alt='arrow' width={30} height={15}/>
+            <span
+              className={
+                styles.arrow + (activeQuestion === 5 ? ` ${styles.open}` : '')
+              }
+            >
+              <Image src='/img/arrow.svg' alt='arrow' width={30} height={15} />
             </span>
           </h3>
-          {activeQuestion === 5 && <div className={styles.answer}>Absolutely not! Part of the fun of a hackathon is coming up with an idea and meeting an awesome team HERE! We will facilitate this process with our team formation event.</div>}    
-          
+          {activeQuestion === 5 && (
+            <div className={styles.answer}>
+              Absolutely not! Part of the fun of a hackathon is coming up with
+              an idea and meeting an awesome team HERE! We will facilitate this
+              process with our team formation event.
+            </div>
+          )}
+
           <h3 className={styles.question} onClick={() => handleToggle(6)}>
             How much does it cost?
-            <span className={styles.arrow + (activeQuestion === 6 ? ` ${styles.open}` : '')}>
-            <Image src='/img/arrow.svg' alt='arrow' width={30} height={15}/>
+            <span
+              className={
+                styles.arrow + (activeQuestion === 6 ? ` ${styles.open}` : '')
+              }
+            >
+              <Image src='/img/arrow.svg' alt='arrow' width={30} height={15} />
             </span>
           </h3>
-          {activeQuestion === 6 && <div className={styles.answer}>MHacks is FREE. MHacks 16 is completely free to attend. In fact, you will go home with some new swag, lessons, and amazing memories! </div>}      
-          
+          {activeQuestion === 6 && (
+            <div className={styles.answer}>
+              MHacks is FREE. MHacks 16 is completely free to attend. In fact,
+              you will go home with some new swag, lessons, and amazing
+              memories!{' '}
+            </div>
+          )}
+
           <h3 className={styles.question} onClick={() => handleToggle(7)}>
             How many people are on a team?
-            <span className={styles.arrow + (activeQuestion === 7 ? ` ${styles.open}` : '')}>
-            <Image src='/img/arrow.svg' alt='arrow' width={30} height={15}/>
+            <span
+              className={
+                styles.arrow + (activeQuestion === 7 ? ` ${styles.open}` : '')
+              }
+            >
+              <Image src='/img/arrow.svg' alt='arrow' width={30} height={15} />
             </span>
           </h3>
-          {activeQuestion === 7 && <div className={styles.answer}>Up to 4 people can be on a single team.</div>}      
-
+          {activeQuestion === 7 && (
+            <div className={styles.answer}>
+              Up to 4 people can be on a single team.
+            </div>
+          )}
         </div>
       </div>
     </div>

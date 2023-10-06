@@ -12,10 +12,10 @@
 
     > .fixedBanner {
       position: fixed;
-      top: 0px; 
+      top: 0px;
       right: 10px;
       z-index: 1000;
-  }
+    }
 
     > .terminal {
       width: 800px;
@@ -118,36 +118,36 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;      
-    
+      padding: 1rem 2rem;
+
       > .navLogo {
         font-size: 1.5rem;
-    
+
         > a {
           color: #fff;
           font-family: 'nm-bold';
-          text-decoration: none;          
+          text-decoration: none;
         }
       }
-    
+
       > .navLinks {
         padding: 0;
         margin: 0;
         font-family: 'nm-bold';
         list-style-type: none;
         display: flex;
-    
+
         > li {
           padding: 0;
           margin: 0;
-    
+
           > a {
             color: #fff;
             text-decoration: none;
             padding: 0.5rem 1rem;
             border-radius: 4px;
             transition: background-color 0.3s ease;
-    
+
             &:hover {
               text-decoration: underline;
             }
@@ -156,7 +156,7 @@
       }
     }
   }
-  
+
   > .hackathon {
     padding: 64px;
     display: flex;
@@ -311,14 +311,14 @@
         align-items: center;
         margin-top: 30px;
         gap: 20px;
-  
+
         > .time {
-          width: 150px; 
+          width: 150px;
           text-align: left;
         }
+      }
     }
   }
-}
   > .faq {
     height: 60vw;
     min-height: 600px;
@@ -349,7 +349,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #9175ff; 
+        border-bottom: 1px solid #9175ff;
         padding: 10px 0;
 
         > .arrow {
@@ -361,7 +361,7 @@
         }
       }
 
-      .answer {        
+      .answer {
         padding: 10px;
         font-family: 'nm-regular';
         font-size: 20px;
