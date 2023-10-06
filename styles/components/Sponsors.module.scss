@@ -1,0 +1,26 @@
+.sponsors {
+  text-align: center;
+  padding: 64px;
+
+  > .logoflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > .mlogo {
+      position: relative;
+
+      > .sixteen {
+        position: absolute;
+        right: -48px;
+        top: 8px;
+      }
+    }
+  }
+
+  > h2 {
+    color: #202020;
+    font-size: 48px;
+    font-family: 'nm-bold';
+  }
+}

@@ -1,0 +1,39 @@
+.schedule {
+  height: 40vw;
+  min-height: 600px;
+  position: relative;
+  padding: 64px;
+  display: flex;
+  justify-content: center;
+
+  > .background {
+    background: url('/img/jump.png');
+    background-position: center center;
+    background-size: cover;
+    mix-blend-mode: color-burn;
+    opacity: 30%;
+    position: absolute;
+    inset: 0;
+  }
+
+  > .block {
+    background: #fff;
+    color: #9175ff;
+    width: 600px;
+    text-align: start;
+    padding: 32px;
+
+    > .scheduleItem {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 30px;
+      gap: 20px;
+
+      > .time {
+        width: 150px;
+        text-align: left;
+      }
+    }
+  }
+}
