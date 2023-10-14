@@ -1,10 +1,11 @@
-import styles from '@/styles/pages/Index.module.scss'
-import Faq from '@/components/Faq'
-import Schedule from '@/components/Schedule'
-import Sponsors from '@/components/Sponsors'
-import Landing from '@/components/Landing'
-import About from '@/components/About'
-import Stats from '@/components/Stats'
+import styles from '@/styles/pages/Index.module.scss';
+import Faq from '@/components/Faq';
+import Schedule from '@/components/Schedule';
+import Sponsors from '@/components/Sponsors';
+import Landing from '@/components/Landing';
+import About from '@/components/About';
+import Stats from '@/components/Stats';
+import Footer from '@/components/Footer';
 
 export default function Index() {
   return (
@@ -20,6 +21,8 @@ export default function Index() {
       <Schedule />
 
       <Faq />
+
+      <Footer />
     </div>
-  )
+  );
 }
