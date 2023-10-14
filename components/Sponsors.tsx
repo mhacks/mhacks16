@@ -24,8 +24,8 @@ const sponsorRows = [
 ];
 const specialCompanies = [
   { logo: 'uber', url: 'https://www.uber.com' },
-  { logo: 'undergroundprinting', url: 'https://www.undergroundprinting.com' },
-  { logo: 'googlecloud', url: 'https://www.cloud.google.com' },
+  { logo: 'undergroundprinting', url: 'https://www.undergroundshirts.com' },
+  { logo: 'googlecloud', url: 'https://cloud.google.com' },
   { logo: 'rossbusinesstech', url: 'https://michiganross.umich.edu/about/business-tech' },
 ];
 
