@@ -43,15 +43,15 @@ export default function Sponsors() {
 
       <h2>Sponsors</h2>
       <div className={styles.sponsorContainer}>
-        {sponsorRows.map((elem) => (
-          <div className={styles.sponsorRow}>
-            {elem.companies.map(company => (<a href={company.url} target="_blank"><img className={styles.sponsorLogo} src={`/img/sponsors/${company.logo}.png`} alt={company.logo} /></a>))}
+        {sponsorRows.map((elem, index) => (
+          <div key={index} className={styles.sponsorRow}>
+            {elem.companies.map((company, index) => (<a key={index} href={company.url} target="_blank"><img className={styles.sponsorLogo} src={`/img/sponsors/${company.logo}.png`} alt={company.logo} /></a>))}
           </div>))}
         <h2>Special thanks to:</h2>
         <div className={styles.sponsorRow}>
 
-          {specialCompanies.map((company) => (
-            <a href={company.url} target="_blank"><img className={styles.sponsorLogo} src={`/img/sponsors/${company.logo}.png`} alt={company.logo} /></a>)
+          {specialCompanies.map((company, index) => (
+            <a key={index} href={company.url} target="_blank"><img className={styles.sponsorLogo} src={`/img/sponsors/${company.logo}.png`} alt={company.logo} /></a>)
           )}
         </div>
       </div>
