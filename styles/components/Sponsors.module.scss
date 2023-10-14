@@ -31,20 +31,27 @@
     flex-direction: column;
     gap: 72px;
 
+    >h2 {
+      margin: 48px 0px -32px 0;
+      color: #9175ff;
+      font-size: 28px;
+      position: relative;
+      font-family: 'nm-bold';
+    }
+
     >.sponsorRow {
-      // border: 1px solid black;
       display: flex;
       justify-content: center;
       gap: 48px;
       flex-wrap: wrap;
 
       .sponsorLogo {
-        height: 108px;
+        height: 48px;
       }
 
-      &:nth-of-type(2) {
+      &:nth-of-type(1) {
         .sponsorLogo {
-          height: 48px;
+          height: 108px;
         }
       }
     }
