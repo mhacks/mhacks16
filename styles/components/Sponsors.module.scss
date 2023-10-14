@@ -1,16 +1,20 @@
 .sponsors {
   text-align: center;
-  padding: 64px;
+  padding: 64px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 
-  > .logoflex {
+  >.logoflex {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    > .mlogo {
+    >.mlogo {
       position: relative;
 
-      > .sixteen {
+      >.sixteen {
         position: absolute;
         right: -48px;
         top: 8px;
@@ -18,7 +22,53 @@
     }
   }
 
-  > h2 {
+  >.sponsorContainer {
+    width: 100%;
+    max-width: 1000px;
+    margin: 48px 0;
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+
+    >.sponsorRow {
+      // border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+
+      .sponsorLogo {
+        height: 108px;
+      }
+
+      &:nth-of-type(2) {
+        .sponsorLogo {
+          height: 48px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      gap: 48px;
+
+      .sponsorRow {
+        gap: 24px;
+
+        .sponsorLogo {
+          height: 48px;
+        }
+      }
+
+      .sponsorRow:nth-of-type(2) {
+        .sponsorLogo {
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  >h2 {
     color: #202020;
     font-size: 48px;
     font-family: 'nm-bold';

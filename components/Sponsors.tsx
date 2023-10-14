@@ -1,5 +1,27 @@
-import Image from 'next/image'
-import styles from '../styles/components/Sponsors.module.scss'
+import Image from 'next/image';
+import styles from '../styles/components/Sponsors.module.scss';
+
+const maxSponsorLogoHeight = 108;
+const sponsorRows = [
+  {
+    companies: [
+      { logo: 'capitalone', url: 'http://www.capitalone.com' },
+      { logo: 'caterpillar', url: 'http://www.caterpillar.com' },
+      { logo: 'warp', url: 'http://www.warp.dev' },
+    ]
+  },
+  {
+    companies: [
+      { logo: 'ramp', url: 'http://www.ramp.com' },
+      { logo: 'qualcomm', url: 'http://www.qualcomm.com' },
+      { logo: 'ford', url: 'http://www.ford.com' },
+      { logo: 'viralitydata', url: 'http://www.viralitydata.com' },
+      { logo: 'roboflow', url: 'http://www.roboflow.com' },
+      { logo: 'optimize', url: 'http://www.optimizemi.org' },
+      { logo: 'engineering', url: 'http://www.engin.umich.edu' },
+    ]
+  }
+];
 
 export default function Sponsors() {
   return (
@@ -14,9 +36,12 @@ export default function Sponsors() {
       </div>
 
       <h2>Sponsors</h2>
-      <h2 style={{ marginTop: '20px', marginBottom: '20px' }}>
-        Coming Soon...
-      </h2>
+      <div className={styles.sponsorContainer}>
+        {sponsorRows.map((elem) => (
+          <div className={styles.sponsorRow}>
+            {elem.companies.map(company => (<a href={company.url} target="_blank"><img className={styles.sponsorLogo} src={`/img/sponsors/${company.logo}.png`} alt={company.logo} /></a>))}
+          </div>))}
+      </div>
       <a
         className={styles.becomeContainer}
         href='mailto:sponsorship@mhacks.org'
@@ -29,5 +54,5 @@ export default function Sponsors() {
         Become a Sponsor
       </a>
     </div>
-  )
+  );
 }
