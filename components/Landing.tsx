@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import styles from '../styles/components/Landing.module.scss'
+import Image from 'next/image';
+import styles from '../styles/components/Landing.module.scss';
 
 export default function Landing() {
   return (
@@ -86,7 +86,13 @@ export default function Landing() {
         >
           Become a Mentor
         </a>
+        <a
+          href='https://tally.so/r/3xDYoE'
+          style={{ color: '#FFFFFF', textDecoration: 'underline' }}
+        >
+          Become a Volunteer
+        </a>
       </div>
     </div>
-  )
+  );
 }
