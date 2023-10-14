@@ -88,6 +88,7 @@ export default function Landing() {
         </a>
         <a
           href='https://tally.so/r/3xDYoE'
+          target="_blank"
           style={{ color: '#FFFFFF', textDecoration: 'underline' }}
         >
           Become a Volunteer
