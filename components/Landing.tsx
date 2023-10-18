@@ -81,7 +81,7 @@ export default function Landing() {
           Become a Sponsor
         </a>
         <a
-          href='mailto:mentorship@mhacks.org'
+          href='https://tally.so/r/woRl6b'
           style={{ color: '#FFFFFF', textDecoration: 'underline' }}
         >
           Become a Mentor
