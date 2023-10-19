@@ -82,6 +82,7 @@ export default function Landing() {
         </a>
         <a
           href='https://tally.so/r/woRl6b'
+          target="_blank"
           style={{ color: '#FFFFFF', textDecoration: 'underline' }}
         >
           Become a Mentor
