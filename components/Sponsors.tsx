@@ -1,33 +1,38 @@
-import Image from 'next/image';
-import styles from '../styles/components/Sponsors.module.scss';
+import Image from 'next/image'
+import styles from '../styles/components/Sponsors.module.scss'
 
-const maxSponsorLogoHeight = 108;
+const maxSponsorLogoHeight = 108
 const sponsorRows = [
   {
     companies: [
       { logo: 'capitalone', url: 'http://www.capitalone.com' },
       { logo: 'caterpillar', url: 'http://www.caterpillar.com' },
       { logo: 'warp', url: 'http://www.warp.dev' },
-    ]
+      { logo: 'grainger', url: 'https://www.grainger.com/' },
+    ],
   },
   {
     companies: [
       { logo: 'ramp', url: 'http://www.ramp.com' },
+      { logo: 'optiver', url: 'https://optiver.com/' },
       { logo: 'qualcomm', url: 'http://www.qualcomm.com' },
-      // { logo: 'ford', url: 'http://www.ford.com' },
+      { logo: 'ford', url: 'http://www.ford.com' },
       { logo: 'viralitydata', url: 'http://www.viralitydata.com' },
       { logo: 'roboflow', url: 'http://www.roboflow.com' },
       { logo: 'optimize', url: 'http://www.optimizemi.org' },
       { logo: 'engineering', url: 'http://www.engin.umich.edu' },
-    ]
-  }
-];
+    ],
+  },
+]
 const specialCompanies = [
   { logo: 'uber', url: 'https://www.uber.com' },
   { logo: 'undergroundprinting', url: 'https://www.undergroundshirts.com' },
   { logo: 'googlecloud', url: 'https://cloud.google.com' },
-  { logo: 'rossbusinesstech', url: 'https://michiganross.umich.edu/about/business-tech' },
-];
+  {
+    logo: 'rossbusinesstech',
+    url: 'https://michiganross.umich.edu/about/business-tech',
+  },
+]
 
 export default function Sponsors() {
   return (
@@ -45,14 +50,28 @@ export default function Sponsors() {
       <div className={styles.sponsorContainer}>
         {sponsorRows.map((elem, index) => (
           <div key={index} className={styles.sponsorRow}>
-            {elem.companies.map((company, index) => (<a key={index} href={company.url} target="_blank"><img className={styles.sponsorLogo} src={`/img/sponsors/${company.logo}.png`} alt={company.logo} /></a>))}
-          </div>))}
+            {elem.companies.map((company, index) => (
+              <a key={index} href={company.url} target='_blank'>
+                <img
+                  className={styles.sponsorLogo}
+                  src={`/img/sponsors/${company.logo}.png`}
+                  alt={company.logo}
+                />
+              </a>
+            ))}
+          </div>
+        ))}
         <h2>Special thanks to:</h2>
         <div className={styles.sponsorRow}>
-
           {specialCompanies.map((company, index) => (
-            <a key={index} href={company.url} target="_blank"><img className={styles.sponsorLogo} src={`/img/sponsors/${company.logo}.png`} alt={company.logo} /></a>)
-          )}
+            <a key={index} href={company.url} target='_blank'>
+              <img
+                className={styles.sponsorLogo}
+                src={`/img/sponsors/${company.logo}.png`}
+                alt={company.logo}
+              />
+            </a>
+          ))}
         </div>
       </div>
       <a
@@ -67,5 +86,5 @@ export default function Sponsors() {
         Become a Sponsor
       </a>
     </div>
-  );
+  )
 }
