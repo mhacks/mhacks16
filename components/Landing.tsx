@@ -62,7 +62,7 @@ export default function Landing() {
           </p>
         </div>
 
-        <div className={styles.apply}>
+        {/* <div className={styles.apply}>
           <a
             href='https://tally.so/r/mKx51K'
             target='_blank'
@@ -70,8 +70,8 @@ export default function Landing() {
           >
             Apply Now
           </a>
-          {/* <p>Due Oct 30</p> */}
-        </div>
+          <p>Due Oct 30</p>
+        </div> */}
       </div>
       <div className={styles.becomeContainer}>
         <a
