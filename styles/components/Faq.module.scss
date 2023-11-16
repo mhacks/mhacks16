@@ -3,21 +3,21 @@
   background: url('/img/faq.png');
   background-position: center center;
   background-size: cover;
-  font-family: 'nm-bold';
+  font-family: 'outfit-bold';
   padding: 64px;
   display: flex;
   justify-content: center;
 
-  > .content {
+  >.content {
     width: 700px;
 
-    > h2 {
+    >h2 {
       font-size: 64px;
       margin-bottom: 16px;
     }
 
-    > h3 {
-      font-family: 'nm-regular';
+    >h3 {
+      font-family: 'outfit-regular';
       font-size: 30px;
       line-height: 45px;
 
@@ -27,7 +27,7 @@
       }
     }
 
-    > .question {
+    >.question {
       cursor: pointer;
       display: flex;
       justify-content: space-between;
@@ -35,7 +35,7 @@
       border-bottom: 1px solid #9175ff;
       padding: 10px 0;
 
-      > .arrow {
+      >.arrow {
         transition: transform 0.3s ease;
 
         &.open {
@@ -46,7 +46,7 @@
 
     .answer {
       padding: 10px;
-      font-family: 'nm-regular';
+      font-family: 'outfit-regular';
       font-size: 20px;
       line-height: 32px;
     }

@@ -9,30 +9,26 @@
   background-position: center center;
   background-size: cover;
 
-  > .fixedBanner {
+  >.fixedBanner {
     position: absolute;
     top: 0px;
     right: 10px;
     z-index: 1000;
   }
 
-  > .terminal {
+  >.terminal {
     margin-top: 40px;
     width: 800px;
     max-width: calc(100% - 80px);
     height: 450px;
     border-radius: 8px;
     border: 2px solid rgba(209, 198, 255, 0.7);
-    background: linear-gradient(
-        251deg,
+    background: linear-gradient(251deg,
         rgba(255, 255, 255, 0.5) 0%,
-        rgba(255, 255, 255, 0.25) 100%
-      ),
-      linear-gradient(
-        0deg,
+        rgba(255, 255, 255, 0.25) 100%),
+      linear-gradient(0deg,
         rgba(51, 0, 255, 0.5) 0%,
-        rgba(51, 0, 255, 0.5) 100%
-      ),
+        rgba(51, 0, 255, 0.5) 100%),
       rgba(255, 255, 255, 0.3);
     padding: 32px;
     display: flex;
@@ -41,7 +37,7 @@
     justify-content: center;
     gap: 16px;
 
-    > img {
+    >img {
       width: 100%;
       max-width: 400px;
     }
@@ -54,21 +50,22 @@
       text-align: center;
       font-weight: 800;
 
-      > p {
+      >p {
         font-weight: 400;
         white-space: pre-wrap;
 
-        > span {
+        >span {
           opacity: 0.5;
         }
 
-        > b {
+        >b {
           font-weight: 800;
           opacity: 1;
         }
 
         @media (max-width: 799.98px) {
           font-size: 16px;
+
           &.big {
             display: none;
           }
@@ -82,16 +79,16 @@
       }
     }
 
-    > .apply {
+    >.apply {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      font-family: 'nm-bold';
+      font-family: 'outfit-bold';
       margin-top: 8px;
 
-      > a {
+      >a {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -105,14 +102,14 @@
         border-bottom: 4px solid #a27ce3;
       }
 
-      > p {
+      >p {
         font-size: 20px;
         color: #fff;
       }
     }
   }
 
-  > .becomeContainer {
+  >.becomeContainer {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -127,7 +124,7 @@
     }
   }
 
-  > .navbar {
+  >.navbar {
     position: absolute;
     top: 0;
     left: 0;
@@ -136,20 +133,20 @@
     align-items: center;
     padding: 1rem 2rem;
 
-    > .navLogo {
+    >.navLogo {
       font-size: 1.5rem;
 
-      > a {
+      >a {
         color: #fff;
-        font-family: 'nm-bold';
+        font-family: 'outfit-bold';
         text-decoration: none;
       }
     }
 
-    > .navLinks {
+    >.navLinks {
       padding: 0;
       margin: 0;
-      font-family: 'nm-bold';
+      font-family: 'outfit-bold';
       list-style-type: none;
       display: flex;
 
@@ -157,11 +154,11 @@
         display: none;
       }
 
-      > li {
+      >li {
         padding: 0;
         margin: 0;
 
-        > a {
+        >a {
           color: #fff;
           text-decoration: none;
           padding: 0.5rem 1rem;

@@ -12,21 +12,21 @@
   //   height: 300px;
   // }
 
-  > img {
+  >img {
     width: 100%;
     max-width: 500px;
   }
 
-  > .what {
+  >.what {
     color: #1d0093;
     max-width: 500px;
-    font-family: 'nm-regular';
+    font-family: 'outfit-regular';
 
-    > h2 {
+    >h2 {
       color: #9175ff;
       font-size: 28px;
       position: relative;
-      font-family: 'nm-bold';
+      font-family: 'outfit-bold';
 
       &:before {
         content: '';
@@ -39,12 +39,12 @@
       }
     }
 
-    > p {
+    >p {
       font-size: 18px;
       line-height: 24px;
 
-      > b {
-        font-family: 'nm-bold';
+      >b {
+        font-family: 'outfit-bold';
       }
     }
   }

@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import styles from '../styles/components/Sponsors.module.scss'
+import Image from 'next/image';
+import styles from '../styles/components/Sponsors.module.scss';
 
-const maxSponsorLogoHeight = 108
+const maxSponsorLogoHeight = 108;
 const sponsorRows = [
   {
     companies: [
@@ -25,7 +25,7 @@ const sponsorRows = [
       { logo: 'engineering', url: 'http://www.engin.umich.edu' },
     ],
   },
-]
+];
 const specialCompanies = [
   { logo: 'uber', url: 'https://www.uber.com' },
   { logo: 'undergroundprinting', url: 'https://www.undergroundshirts.com' },
@@ -34,7 +34,7 @@ const specialCompanies = [
     logo: 'rossbusinesstech',
     url: 'https://michiganross.umich.edu/about/business-tech',
   },
-]
+];
 
 export default function Sponsors() {
   return (
@@ -82,11 +82,11 @@ export default function Sponsors() {
         style={{
           color: '#897de6',
           textDecoration: 'underline',
-          fontFamily: 'nm-bold',
+          fontFamily: 'outfit-bold',
         }}
       >
         Become a Sponsor
       </a>
     </div>
-  )
+  );
 }
