@@ -62,6 +62,15 @@ export default function Landing() {
           </p>
         </div>
 
+        <div className={styles.apply}>
+          <a
+            href='https://live.mhacks.org'
+            rel='noopener noreferrer'
+          >
+            live.mhacks.org
+          </a>
+        </div>
+
         {/* <div className={styles.apply}>
           <a
             href='https://tally.so/r/mKx51K'
