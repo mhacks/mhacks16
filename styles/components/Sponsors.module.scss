@@ -24,7 +24,7 @@
 
   >.sponsorContainer {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 48px 0;
     // border: 1px solid black;
     display: flex;
@@ -46,12 +46,12 @@
       flex-wrap: wrap;
 
       .sponsorLogo {
-        height: 48px;
+        height: 52px;
       }
 
       &:nth-of-type(1) {
         .sponsorLogo {
-          height: 108px;
+          height: 128px;
         }
       }
     }
