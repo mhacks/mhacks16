@@ -5,6 +5,7 @@ import Sponsors from '@/components/Sponsors';
 import Landing from '@/components/Landing';
 import About from '@/components/About';
 import Stats from '@/components/Stats';
+import MentorThanks from '@/components/MentorThanks';
 import Footer from '@/components/Footer';
 
 export default function Index() {
@@ -21,6 +22,8 @@ export default function Index() {
       <Schedule />
 
       <Faq />
+
+      <MentorThanks />
 
       <Footer />
     </div>
