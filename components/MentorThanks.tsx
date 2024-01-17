@@ -1,9 +1,9 @@
-import styles from '@/styles/components/MentorThanks.module.scss';
+import styles from '@/styles/components/MentorThanks.module.scss'
 
 const volunteers = [
   'Advait',
   'Akira',
-  'Alex Beloui ',
+  'Alex Beloiu ',
   'Amy',
   'Angela Yuan',
   'April',
@@ -75,7 +75,7 @@ const volunteers = [
   'Mukundh',
   'Swaraj',
   'Layne',
-  'Arjun Lalwani',  // start of judges
+  'Arjun Lalwani', // start of judges
   'Camden Pastyrnak ',
   'Peter Wu',
   'Adviti Mishra',
@@ -91,15 +91,17 @@ const volunteers = [
   'Shivendra Srivastava',
   'Saloni Thakkar',
   'Mukundh Murthy',
-];
-
+]
 
 export default function MentorThanks() {
-  return <div className={styles.container}>
-    <h2>Thank You to our Volunteers!</h2>
-    <div className={styles.nameContainer}>
-      {volunteers.map(name => (<p key={name}>{name}</p>))}
+  return (
+    <div className={styles.container}>
+      <h2>Thank You to our Volunteers!</h2>
+      <div className={styles.nameContainer}>
+        {volunteers.map((name) => (
+          <p key={name}>{name}</p>
+        ))}
+      </div>
     </div>
-  </div>;
+  )
 }
-
