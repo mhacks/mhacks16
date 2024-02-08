@@ -37,7 +37,6 @@ const volunteers = [
   'Derek Miller',
   'Akshay Kannan',
   'Ashwin Kumar',
-  'Daniel Malis',
   'Dheera (mentor)',
   'Lucas',
   'Madhav Sharma',

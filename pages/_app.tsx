@@ -10,9 +10,6 @@ const image = 'https://mhacks.org/img/background.png'
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props
-  console.error(
-    'Warning: Encountered two children with the same key, `Daniel Malis`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. \n    at div    \n    at div \n    at MentorThanks \n    at div \n    at Index \n    at App (https://nsadnkwjqdhwqoudho23uo89u20odij2odi23jdpo28dijo2iduo9iu.mhacks.org)\n    at PathnameContextProviderAdapter (webpack-internal:///./node_modules/next/dist/shared/lib/router/adapters.js:80:11) \n    at ErrorBoundary (webpack-internal:///./node_modules/next/dist/compiled/@next/react-dev-overlay/dist/client.js:306:63) \n    at ReactDevOverlay (webpack-internal:///./node_modules/next/dist/compiled/@next/react-dev-overlay/dist/client.js:858:919)\n    at Container (webpack-internal:///./node_modules/next/dist/client/index.js:78:1)\n    at AppContainer (webpack-internal:///./node_modules/next/dist/client/index.js:182:11)\n    at Root (webpack-internal:///./node_modules/next/dist/client/index.js:372:11)'
-  )
   return (
     <>
       <Head>
