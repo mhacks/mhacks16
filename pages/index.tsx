@@ -12,20 +12,6 @@ export default function Index() {
   return (
     <div className={styles.container}>
       <Landing />
-
-      <About />
-
-      <Stats />
-
-      <Sponsors />
-
-      <Schedule />
-
-      <Faq />
-
-      <MentorThanks />
-
-      <Footer />
     </div>
   );
 }

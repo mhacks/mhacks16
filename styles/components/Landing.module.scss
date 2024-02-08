@@ -1,3 +1,12 @@
+.noScroll {
+  overflow: hidden;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
 @keyframes bubble {
   0% {
     transform: scale(1);
