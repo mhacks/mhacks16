@@ -8,7 +8,10 @@ export default function Landing() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src='/img/logo_m.svg' alt='logo.svg' className={styles.logo} />
 
-        <div className={styles.hype}>Coming soon...</div>
+        <h3>Interested in sponsoring, or just have a question?</h3>
+        <a href="mailto:hackathon@umich.edu" className={styles.hype}>Contact Us</a>
+        <p>Having trouble with the link?</p>
+        <p>Paste our email in: <a href="mailto:hackathon@umich.edu">hackathon@umich.edu</a></p>
       </div>
     </div>
   )
